@@ -3,7 +3,15 @@ import SwiftUI
 
 struct NotificationView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List{
+            ForEach(1...30, id: \.self){ i in
+                HStack{
+                    Image(systemName: "\(i).circle")
+                    Text("Notification \(i)")
+                }
+            }
+        }
+        .listStyle(.plain)
     }
 }
 

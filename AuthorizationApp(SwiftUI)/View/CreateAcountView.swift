@@ -1,11 +1,11 @@
 import SwiftUI
+import FirebaseFirestore
 import FirebaseAuth
 
 struct CreateAccountView: View {
  
     @State private var name = ""
     @State private var age = ""
-    @State private var dob = ""
     @State private var email = ""
     @State private var password = ""
     @State private var confirmPassword = ""
@@ -101,6 +101,20 @@ struct CreateAccountView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding()
     }
+    ///Mark : - Save UsersData to FireStore
+    func createFirestoreCollection(userId: String){
+        let db = Firestore.firestore()
+        let collection = "users"
+        let ageInt = Int(age) ?? 0
+        
+        db.collection(collection).document(userId).setData(["name": name,"age": ageInt,"email": email]) { error in
+            if let error = error {
+                print("Firestore Error\(error.localizedDescription)")
+                alertMessage = "Failed to save data"
+                showAlert = true
+            }
+        }
+    }
     
     ///Mark: - Validate Fields and Details
     func validate() -> Bool {
@@ -132,7 +146,11 @@ struct CreateAccountView: View {
                 alertMessage = "Account creation failed: \(error.localizedDescription)"
                 primaryAlertText = "Ok"
                 secondaryAlertText = "Cancel"
-            } else {
+            } else if let userId = result?.user.uid {
+                
+                //Create user in Firestore
+                createFirestoreCollection(userId: userId)
+                
                 alertText = "Congratulations"
                 alertMessage = "Your account has been created successfully"
                 primaryAlertText = "Login"

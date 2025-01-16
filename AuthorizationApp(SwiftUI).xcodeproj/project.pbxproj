@@ -17,6 +17,8 @@
 		F4BE6D712D364B5600F96C43 /* CreateAcountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE6D702D364B5600F96C43 /* CreateAcountView.swift */; };
 		F4BE6D732D364B7E00F96C43 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE6D722D364B7E00F96C43 /* HomeView.swift */; };
 		F4BE6D752D36744A00F96C43 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE6D742D36744A00F96C43 /* NotificationView.swift */; };
+		F4CFC0502D38DA8C0022C1C5 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CFC04F2D38DA8C0022C1C5 /* UserProfileView.swift */; };
+		F4CFC0532D38DAD50022C1C5 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CFC0522D38DAD50022C1C5 /* Users.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		F4BE6D702D364B5600F96C43 /* CreateAcountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAcountView.swift; sourceTree = "<group>"; };
 		F4BE6D722D364B7E00F96C43 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F4BE6D742D36744A00F96C43 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		F4CFC04F2D38DA8C0022C1C5 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		F4CFC0522D38DAD50022C1C5 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 		F4BE6D5D2D36433200F96C43 /* AuthorizationApp(SwiftUI) */ = {
 			isa = PBXGroup;
 			children = (
+				F4BE6D602D36433200F96C43 /* MainTabView.swift */,
+				F4CFC0512D38DAAF0022C1C5 /* Model */,
 				F44578492D3798AD009BAC42 /* GoogleService-Info.plist */,
 				F4BE6D5E2D36433200F96C43 /* AuthorizationApp_SwiftUI_App.swift */,
 				F4BE6D6C2D36435400F96C43 /* View */,
@@ -107,10 +113,10 @@
 			children = (
 				F4BE6D6E2D36437D00F96C43 /* LoginView.swift */,
 				F4BE6D702D364B5600F96C43 /* CreateAcountView.swift */,
-				F4BE6D602D36433200F96C43 /* MainTabView.swift */,
 				F4BE6D722D364B7E00F96C43 /* HomeView.swift */,
 				F4BE6D742D36744A00F96C43 /* NotificationView.swift */,
 				F4BE6D6D2D36436C00F96C43 /* SubView */,
+				F4CFC04F2D38DA8C0022C1C5 /* UserProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -120,6 +126,14 @@
 			children = (
 			);
 			path = SubView;
+			sourceTree = "<group>";
+		};
+		F4CFC0512D38DAAF0022C1C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F4CFC0522D38DAD50022C1C5 /* Users.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +251,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4CFC0532D38DAD50022C1C5 /* Users.swift in Sources */,
+				F4CFC0502D38DA8C0022C1C5 /* UserProfileView.swift in Sources */,
 				F4BE6D6F2D36437D00F96C43 /* LoginView.swift in Sources */,
 				F4BE6D612D36433200F96C43 /* MainTabView.swift in Sources */,
 				F4BE6D732D364B7E00F96C43 /* HomeView.swift in Sources */,
